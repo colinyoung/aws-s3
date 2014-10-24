@@ -72,6 +72,9 @@ module AWS
         super(message)
       end
     end
+
+    class NoSuchBucket < ResponseError
+    end
     
     # Raised if an invalid key name is passed when creating an S3Object.
     class InvalidKeyName < S3Exception
